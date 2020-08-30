@@ -10,7 +10,7 @@ from telegram import ParseMode
 
 def attach(update, context):
   if update.message.reply_to_message == None:
-    update.message.reply_text("*Hei Follow These Steps..*
+    update.message.reply_text(" *Hei Follow These Steps..*
 
 1. Send any File/media
 
