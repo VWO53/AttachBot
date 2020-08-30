@@ -10,7 +10,7 @@ from telegram import ParseMode
 
 def attach(update, context):
   if update.message.reply_to_message == None:
-    update.message.reply_text(" *Hei Follow These Steps..*
+    update.message.reply_text("""*Hei Follow These Steps..*
 
 1. Send any File/media
 
@@ -19,7 +19,7 @@ def attach(update, context):
 *Available Commands..*
 
 /start - `Check The Bot Is Online Or Offline`
-/help - `How To Use Me`")
+/help - `How To Use Me`""")
   else:
     m = context.bot.forward_message("@" + Config.CHANNEL_USERNAME, update.effective_chat.id, update.message.reply_to_message.message_id)
     m_id = m.message_id
