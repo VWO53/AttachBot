@@ -10,16 +10,11 @@ from telegram import ParseMode
 
 def attach(update, context):
   if update.message.reply_to_message == None:
-    update.message.reply_text("""**Hei Follow These Steps..**
+    update.message.reply_text("""Hei Follow These Steps..
 
 1. Send any File/media
 
-2. Reply Then Add text which you want to generate the attached post.
-
-**Available Commands..**
-
-/start - ```Check The Bot Is Online Or Offline```
-/help - `How To Use Me`""")
+2. Reply Then Add text which you want to generate the attached post.""")
   else:
     m = context.bot.forward_message("@" + Config.CHANNEL_USERNAME, update.effective_chat.id, update.message.reply_to_message.message_id)
     m_id = m.message_id
